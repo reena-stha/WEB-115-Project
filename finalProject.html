@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>WEB-115 Final Project</title>
+
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            legend {
+                font-size: large;
+            }
+            form {
+                width: 1297px;
+            }
+
+            /*applies css to id*/
+            #divwrapper {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            /*applies css to class*/
+            .error {
+                color:#ff0000;
+                font-weight: lighter;
+                font-style: italic;
+                display: inline-block;
+            }
+            .no_error {
+                color:#000000;
+                font-weight: lighter;
+                font-style: italic;
+                display: none;
+            }
+            .input_textarea {
+                resize: vertical;
+                height: 100px;
+                max-height: 100px;
+                min-height: 100px;
+                width: inherit;
+            }
+            .odd_col {
+                background-color: rgb(230, 230, 230);
+                padding: 5px;
+                margin: 0px;
+            }
+            .even_col {
+                background-color: rgb(212, 212, 212);
+                padding: 5px;
+                margin: 0px;
+            }
+            .banner {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; /* Align the top section to the left */
+                height: 150px;
+                width: 1297px;
+                background-color: #f8f8f8;
+                border: 1px solid #ccc;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .top-section {
+                font-size: 14px;
+                font-family: Arial, sans-serif;
+                margin-bottom: 10px;
+            }
+            .middle-section {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+            .left, .right {
+                display: flex;
+            }
+            .left img, .right img {
+                height: 100px;
+                width: 100px;
+                margin-right: 10px;
+            }
+            .title {
+                flex-grow: 1;
+                text-align: center;
+                font-size: 36px;
+                font-weight: bold;
+                font-family: 'Georgia', serif;
+            }
+        </style>
+
+        <script type="text/javascript" src="projectJS.js" defer></script>
+    </head>
+    <body>
+        <div id="divwrapper">
+            <div class="banner">
+                <div class="top-section">
+                    Name: Reena Shrestha | Course: WEB-115 | Section: 2024FA.WEB.115.0004
+                </div>
+                <div class="middle-section">
+                    <div class="left">
+                        <img src="wine glass.png" alt="Image 1" />
+                        <img src="pizza.png" alt="Image 2" />
+                    </div>
+                    <div class="title">Build Your Meal Plan</div>
+                    <div class="right">
+                        <img src="pepper.png" alt="Image 3" />
+                        <img src="noodles.png" alt="Image 4" />
+                    </div>
+                </div>
+              </div>
+
+            <form>
+                <br/><br/>
+                <fieldset name="user_information">
+                    <legend>User Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" value="" autocomplete="off" required />
+                    <span id="name_error" class="no_error">&nbsp;&nbsp;* Name is required!</span><br/><br/>
+    
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" value="" autocomplete="off" required />
+                    <span id="email_error" class="no_error">&nbsp;&nbsp;* Email should be in valid format!</span><br/><br/>
+    
+                    <label for="goal">Goal for the week: </label>
+                    <input type="text" name="goal" id="goal" value="" required />
+                    <span id="goal_error" class="no_error">&nbsp;&nbsp;* Goal is required!</span>
+                </fieldset>
+    
+                <br/><br/>
+                <fieldset name="meal_input">
+                    <legend>Meals Input</legend>
+                    
+                    <table cellspacing="0">
+                        <!--First Row-->
+                        <tr>
+                            <th class="odd_col">Monday</th>
+                            <th class="even_col">Tuesday</th>
+                            <th class="odd_col">Wednesday</th>
+                            <th class="even_col">Thursday</th>
+                            <th class="odd_col">Friday</th>
+                            <th class="even_col">Saturday</th>
+                            <th class="odd_col">Sunday</th>
+                        </tr>
+    
+                        <!--First Row-->
+                        <tr>
+                            <td class="odd_col">Breakfast<textarea type="text" name="mon_breakfast" id="mon_breakfast" class="input_textarea"></textarea></td>
+                            <td class="even_col">Breakfast<textarea type="text" name="tue_breakfast" id="tue_breakfast" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Breakfast<textarea type="text" name="wed_breakfast" id="wed_breakfast" class="input_textarea"></textarea></td>
+                            <td class="even_col">Breakfast<textarea type="text" name="thu_breakfast" id="thu_breakfast" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Breakfast<textarea type="text" name="fri_breakfast" id="fri_breakfast" class="input_textarea"></textarea></td>
+                            <td class="even_col">Breakfast<textarea type="text" name="sat_breakfast" id="sat_breakfast" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Breakfast<textarea type="text" name="sun_breakfast" id="sun_breakfast" class="input_textarea"></textarea></td>
+                        </tr>
+    
+                        <tr>
+                            <td class="odd_col">Snack<textarea type="text" name="mon_first_snack" id="mon_first_snack" class="input_textarea"></textarea></td>
+                            <td class="even_col">Snack<textarea type="text" name="tue_first_snack" id="tue_first_snack" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Snack<textarea type="text" name="wed_first_snack" id="wed_first_snack" class="input_textarea"></textarea></td>
+                            <td class="even_col">Snack<textarea type="text" name="thu_first_snack" id="thu_first_snack" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Snack<textarea type="text" name="fri_first_snack" id="fri_first_snack" class="input_textarea"></textarea></td>
+                            <td class="even_col">Snack<textarea type="text" name="sat_first_snack" id="sat_first_snack" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Snack<textarea type="text" name="sun_first_snack" id="sun_first_snack" class="input_textarea"></textarea></td>
+                        </tr>
+    
+                        <tr>
+                            <td class="odd_col">Lunch<textarea type="text" name="mon_lunch" id="mon_lunch" class="input_textarea"></textarea></td>
+                            <td class="even_col">Lunch<textarea type="text" name="tue_lunch" id="tue_lunch" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Lunch<textarea type="text" name="wed_lunch" id="wed_lunch" class="input_textarea"></textarea></td>
+                            <td class="even_col">Lunch<textarea type="text" name="thu_lunch" id="thu_lunch" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Lunch<textarea type="text" name="fri_lunch" id="fri_lunch" class="input_textarea"></textarea></td>
+                            <td class="even_col">Lunch<textarea type="text" name="sat_lunch" id="sat_lunch" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Lunch<textarea type="text" name="sun_lunch" id="sun_lunch" class="input_textarea"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td class="odd_col">Snack<textarea type="text" name="mon_second_snack" id="mon_second_snack" class="input_textarea"></textarea></td>
+                            <td class="even_col">Snack<textarea type="text" name="tue_second_snack" id="tue_second_snack" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Snack<textarea type="text" name="wed_second_snack" id="wed_second_snack" class="input_textarea"></textarea></td>
+                            <td class="even_col">Snack<textarea type="text" name="thu_second_snack" id="thu_second_snack" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Snack<textarea type="text" name="fri_second_snack" id="fri_second_snack" class="input_textarea"></textarea></td>
+                            <td class="even_col">Snack<textarea type="text" name="sat_second_snack" id="sat_second_snack" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Snack<textarea type="text" name="sun_second_snack" id="sun_second_snack" class="input_textarea"></textarea></td>
+                        </tr>
+    
+                        <tr>
+                            <td class="odd_col">Dinner<textarea type="text" name="mon_dinner" id="mon_dinner" class="input_textarea"></textarea></td>
+                            <td class="even_col">Dinner<textarea type="text" name="tue_dinner" id="tue_dinner" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Dinner<textarea type="text" name="wed_dinner" id="wed_dinner" class="input_textarea"></textarea></td>
+                            <td class="even_col">Dinner<textarea type="text" name="thu_dinner" id="thu_dinner" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Dinner<textarea type="text" name="fri_dinner" id="fri_dinner" class="input_textarea"></textarea></td>
+                            <td class="even_col">Dinner<textarea type="text" name="sat_dinner" id="sat_dinner" class="input_textarea"></textarea></td>
+                            <td class="odd_col">Dinner<textarea type="text" name="sun_dinner" id="sun_dinner" class="input_textarea"></textarea></td>
+                        </tr>
+                    </table>
+                </fieldset>
+    
+                <br/>
+                <input type="reset" value="Clear" id="clear_button" />
+                <input type="submit" value="View Meal Plan" id="submit_button" />
+                <input type="button" value="Print or Download Meal Plan" id="print_button" /><span id="submit_error" class="no_error">&nbsp;&nbsp;* Please fix all issues in the form!</span>
+            </form>
+        </div>
+    </body>
+</html>
